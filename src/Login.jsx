@@ -3,16 +3,14 @@ import { useState } from "react"
 
 function Login() {
   const navigate = useNavigate()
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-
+ 
+  
   const handleLogin = (e) => {
     e.preventDefault()
 
     console.log("CLICK OK") // 👈 test
-    console.log(email, password)
-
-    if (email !== "" && password !== "") {
+   
+     {
       localStorage.setItem("auth", "true")
       navigate("/dashboard")
     }
@@ -27,12 +25,13 @@ function Login() {
           <input
             type="email"
             placeholder="E-mail"
-            onChange={(e) => setEmail(e.target.value)}
+           
           />
           <input
-            type="password"
-            placeholder="Mot de passe"
-            onChange={(e) => setPassword(e.target.value)}
+            
+            
+           
+           
           />
 
           <button type="submit">Se connecter</button>
