@@ -1,20 +1,60 @@
+import { useState } from "react"
 import Sidebar from "./Sidebar"
 import Topbar from "./Topbar"
-import hotels from "./Data"
+import hotelsData from "./Data" // tes hôtels existants
 
 function Hotels() {
+  const [hotels, setHotels] = useState(hotelsData)
+  const [showModal, setShowModal] = useState(false)
+
+  const [newHotel, setNewHotel] = useState({
+    name: "",
+    location: "",
+    price: "",
+    image: "",
+  })
+
+  const handleChange = (e) => {
+    setNewHotel({ ...newHotel, [e.target.name]: e.target.value })
+  }
+
+  const addHotel = () => {
+    if (
+      !newHotel.name ||
+      !newHotel.location ||
+      !newHotel.price ||
+      !newHotel.image
+    ) {
+      alert("Veuillez remplir tous les champs")
+      return
+    }
+
+    setHotels([
+      ...hotels,
+      { id: Date.now(), ...newHotel, price: Number(newHotel.price) },
+    ])
+
+    setNewHotel({ name: "", location: "", price: "", image: "" })
+    setShowModal(false)
+  }
+
   return (
     <div className="dashboard">
       <Sidebar />
-
       <div className="main">
         <Topbar />
 
+        {/* HEADER */}
         <div className="hotels-header">
-          <h2>Hôtels <span>8</span></h2>
-          <button>+ Créer un nouveau hôtel</button>
+          <h2>
+            Hôtels <span>{hotels.length}</span>
+          </h2>
+          <button onClick={() => setShowModal(true)}>
+            + Créer un nouvel hôtel
+          </button>
         </div>
 
+        {/* LISTE DES HÔTELS */}
         <div className="hotel-grid">
           {hotels.map((hotel) => (
             <div className="hotel-card" key={hotel.id}>
@@ -25,6 +65,147 @@ function Hotels() {
             </div>
           ))}
         </div>
+
+        {/* MODAL */}
+        {showModal && (
+          <div className="modal-backdrop">
+            <div className="modal-content">
+              <h3>Ajouter un nouvel hôtel</h3>
+
+              {/* Prévisualisation image */}
+              {newHotel.image && (
+                <img
+                  src={newHotel.image}
+                  alt="Preview"
+                  className="preview-image"
+                />
+              )}
+
+              <input
+                type="text"
+                name="name"
+                placeholder="Nom de l'hôtel"
+                value={newHotel.name}
+                onChange={handleChange}
+              />
+
+              <input
+                type="text"
+                name="location"
+                placeholder="Localisation"
+                value={newHotel.location}
+                onChange={handleChange}
+              />
+
+              <input
+                type="number"
+                name="price"
+                placeholder="Prix (FCFA)"
+                value={newHotel.price}
+                onChange={handleChange}
+              />
+
+              <input
+                type="text"
+                name="image"
+                placeholder="URL de l'image"
+                value={newHotel.image}
+                onChange={handleChange}
+              />
+
+              <div className="modal-actions">
+                <button onClick={addHotel}>Ajouter</button>
+                <button onClick={() => setShowModal(false)}>Annuler</button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* CSS intégré */}
+        <style>{`
+          .hotel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+          }
+          .hotel-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 10px;
+            text-align: center;
+          }
+          .hotel-card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+          }
+          .location {
+            color: gray;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+          }
+          .price {
+            font-weight: bold;
+            color: #333;
+          }
+          /* MODAL */
+          .modal-backdrop {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+          }
+          .modal-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+          }
+          .modal-content input {
+            width: 100%;
+            padding: 8px 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+          }
+          .modal-actions {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+          }
+          .modal-actions button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+          }
+          .modal-actions button:first-child {
+            background-color: #4caf50;
+            color: #fff;
+          }
+          .modal-actions button:last-child {
+            background-color: #f44336;
+            color: #fff;
+          }
+          .preview-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+          }
+        `}</style>
       </div>
     </div>
   )
