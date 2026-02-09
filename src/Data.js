@@ -18,21 +18,21 @@ const hotels = [
     name: "Radisson Blu Hotel",
     location: "Corniche Ouest, Dakar",
     price: "220 000",
-    image: "https://images.unsplash.com/photo-1501117716987-c8e1ecb210d1"
+    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945"
   },
   {
     id: 4,
     name: "Pullman Dakar Teranga",
     location: "Place de l’Indépendance",
     price: "300 000",
-    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb"
+    image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d"
   },
   {
     id: 5,
     name: "Hôtel Lac Rose",
     location: "Lac Rose, Dakar",
     price: "250 000",
-    image: "https://images.unsplash.com/photo-1505691723518-36a5ac3b2b8f"
+    image:"https://images.unsplash.com/photo-1566073771259-6a8506099945"
   },
   {
     id: 6,
@@ -53,7 +53,7 @@ const hotels = [
     name: "Pullman Dakar Teranga",
     location: "Place de l’Indépendance",
     price: "300 000",
-    image: "https://images.unsplash.com/photo-1501117716987-c8e1ecb210d1"
+    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b"
   }
 ]
 
