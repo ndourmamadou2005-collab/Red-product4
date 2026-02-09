@@ -202,10 +202,29 @@ function Hotels() {
             height: 100%;
             object-fit: cover;
           }
+            /* Effet hover sur la carte d'hôtel */
+.hotel-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hotel-card:hover {
+  transform: translateY(-5px) scale(1.03); /* Légère montée et zoom */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Ombre plus visible */
+}
+
+/* Optionnel : effet sur l'image */
+.hotel-card:hover .hotel-img {
+  filter: brightness(90%); /* L'image devient légèrement plus sombre */
+  transition: filter 0.3s ease;
+}
         `}</style>
       </div>
     </div>
   )
 }
+
 
 export default Hotels
