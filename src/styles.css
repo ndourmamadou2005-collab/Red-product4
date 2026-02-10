@@ -71,7 +71,7 @@ body {
     background: #f4f4f4;
   }
   
-  ..topbar {
+  .topbar {
   display: flex;
   align-items: center;
   justify-content: center; /* ✅ centre le contenu */
