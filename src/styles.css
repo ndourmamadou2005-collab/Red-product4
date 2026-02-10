@@ -71,11 +71,32 @@ body {
     background: #f4f4f4;
   }
   
-  .topbar {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
+  ..topbar {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* ✅ centre le contenu */
+  height: 60px;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* Champ de recherche centré */
+.topbar input {
+  width: 300px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+/* Icônes alignées à droite */
+.topbar .icons {
+  position: absolute;
+  right: 20px;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
   
   .cards {
     display: grid;
