@@ -7,12 +7,12 @@ function ResetPassword() {
   const handleReset = (e) => {
     e.preventDefault()
     alert("Lien de réinitialisation envoyé !")
-    navigate("/")
   }
 
   return (
     <div className="login-container">
       <div className="login-card">
+
         <h3>Réinitialiser le mot de passe</h3>
 
         <form onSubmit={handleReset}>
@@ -27,6 +27,15 @@ function ResetPassword() {
             Envoyer
           </button>
         </form>
+
+        {/* 🔹 Bouton retour placé en bas */}
+        <button
+          className="back-login-btn-bottom"
+          onClick={() => navigate("/")}
+        >
+          Se connecter
+        </button>
+
       </div>
     </div>
   )
