@@ -51,112 +51,114 @@ function Sidebar() {
 
      {/* CSS */}
       <style>{`
-        /* Sidebar */
-        .sidebar {
-          width: 220px;
-          background-color: #222;
-          color: #fff;
-          padding: 20px;
-          min-height: 100vh;
-          box-sizing: border-box;
-          transition: transform 0.3s ease;
-        }
+  /* Sidebar */
+  .sidebar {
+    width: 220px;
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+  }
 
-        .sidebar h3 {
-          font-size: 1.2rem;
-          margin-bottom: 20px;
-        }
+  .sidebar h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
 
-        .sidebar ul {
-          list-style: none;
-          padding: 0;
-        }
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
 
-        .sidebar-link {
-          display: block;
-          color: #fff;
-          text-decoration: none;
-          font-weight: 600;
-          font-size: 1.1rem;
-          padding: 8px 12px;
-          border-radius: 6px;
-          margin-bottom: 10px;
-          transition: background 0.3s ease;
-        }
+  .sidebar-link {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    transition: background 0.3s ease;
+  }
 
-        .sidebar-link:hover {
-          background-color: #4caf50;
-        }
+  .sidebar-link:hover {
+    background-color: #4caf50;
+  }
 
-        .user {
-          margin-top: 30px;
-        }
+  .user {
+    margin-top: 30px;
+  }
 
-        .user span {
-          font-size: 0.8rem;
-          color: #4caf50;
-        }
+  .user span {
+    font-size: 0.8rem;
+    color: #4caf50;
+  }
 
-        .hamburger {
-  display: none;
-  font-size: 2rem;
-  background-color: #f83e06; /* fond jaune */
-  border: none;
-  color: #222; /* couleur des traits */
-  cursor: pointer;
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  z-index: 1001;
-  padding: 5px 10px;
-  border-radius: 6px;
-}
-        /* =====================
-           MOBILE / TABLETTE
-        ===================== */
-        @media (max-width: 768px) {
-          .sidebar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 180px;
-            transform: translateX(-100%);
-            z-index: 1000;
-          }
+  .hamburger {
+    display: none;
+    font-size: 2rem;
+    background-color: #f7b731;
+    border: none;
+    color: #222;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1100; /* plus haut que la sidebar */
+    padding: 5px 10px;
+    border-radius: 6px;
+  }
 
-          .sidebar.open {
-            transform: translateX(0);
-          }
+  /* =====================
+     MOBILE / TABLETTE
+  ===================== */
+  @media (max-width: 768px) {
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 180px;
+      transform: translateX(-100%);
+      z-index: 1000;
+      padding-top: 70px; /* 🔥 espace pour éviter chevauchement */
+    }
 
-          .hamburger {
-            display: block;
-          }
+    .sidebar.open {
+      transform: translateX(0);
+    }
 
-          .sidebar h3 {
-            font-size: 1rem;
-          }
+    .hamburger {
+      display: block;
+    }
 
-          .sidebar-link {
-            font-size: 0.95rem;
-          }
-        }
+    .sidebar h3 {
+      font-size: 1rem;
+    }
 
-        @media (max-width: 480px) {
-          .sidebar {
-            width: 150px;
-          }
+    .sidebar-link {
+      font-size: 0.95rem;
+    }
+  }
 
-          .sidebar-link {
-            font-size: 0.85rem;
-          }
+  @media (max-width: 480px) {
+    .sidebar {
+      width: 150px;
+    }
 
-          .user p,
-          .user span {
-            font-size: 0.75rem;
-          }
-        }
-      `}</style>
+    .sidebar-link {
+      font-size: 0.85rem;
+    }
+
+    .user p,
+    .user span {
+      font-size: 0.75rem;
+    }
+  }
+`}</style>
     </>
   );
 }
