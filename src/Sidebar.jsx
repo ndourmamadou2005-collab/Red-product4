@@ -17,6 +17,9 @@ function Sidebar() {
 
       {/* Sidebar */}
       <div className={`sidebar ${open ? "open" : ""}`}>
+        <div>
+          
+        </div>
        <h3>PRODUIT ROUGE</h3>
 
         <ul>
