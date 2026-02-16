@@ -30,6 +30,8 @@ function App() {
         element={isAuth ? <Hotels /> : <Navigate to="/" />}
       />
     </Routes>
+    //Route path="/hotels" element={isAuth ? <Hotels /> : <Navigate to="/" />}
+
   )
 }
 
