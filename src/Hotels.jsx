@@ -1,7 +1,7 @@
 import { useState, useRef } from "react"
 import Sidebar from "./Sidebar"
 import Topbar from "./Topbar"
-import hotelsData from "./data"
+import Data from "./Data"
 
 // ─── Modal Créer un hôtel ───────────────────────────────────────────────────
 function CreateHotelModal({ onClose, onSave }) {

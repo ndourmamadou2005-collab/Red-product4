@@ -8,9 +8,6 @@ function Dashboard() {
       <div className="main">
         <Topbar />
 
-        <h2>Bienvenue sur RED Product</h2>
-        <p>Lorem ipsum dolor sit amet consectetur</p>
-
         <div className="cards">
           <div className="card purple">125<br />Formulaires</div>
           <div className="card green">40<br />Messages</div>
