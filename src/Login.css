@@ -1,0 +1,117 @@
+/* Background */
+.login-container {
+  background-color: #545b62;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.logo-icon {
+  width: 35px;
+  height: 35px;
+  background-color: #e6e6e6;
+  border-radius: 6px;
+  position: relative;
+}
+
+.logo-icon::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 11px;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 12px solid #545b62;
+}
+
+.logo h1 {
+  color: #f2f2f2;
+  font-size: 22px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/* Card */
+.login-card {
+  background-color: #f2f2f2;
+  width: 420px;
+  padding: 33px;
+  border-radius: 4px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+.login-title {
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 16px;
+}
+
+/* Inputs */
+.input-field {
+  width: 93%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: #cfd6df;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+}
+
+/* Remember */
+.remember-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Button */
+.login-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #4d555c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: #3f464c;
+}
+
+/* Bottom texts */
+.forgot-password {
+  margin-top: 25px;
+  color: #f5a623;
+  font-weight: bold;
+}
+
+.signup-text {
+  margin-top: 10px;
+  color: white;
+}
+
+.signup-text span {
+  color: #f5a623;
+  font-weight: bold;
+  cursor: pointer;
+}

@@ -17,7 +17,7 @@ function Sidebar() {
 
       {/* Sidebar */}
       <div className={`sidebar ${open ? "open" : ""}`}>
-        <h3>PRODUIT ROUGE</h3>
+       <h3>PRODUIT ROUGE</h3>
 
         <ul>
           <li>
@@ -46,8 +46,9 @@ function Sidebar() {
         </div>
       </div>
 
-      {/* CSS */}
+     {/* CSS */}
       <style>{`
+        /* Sidebar */
         .sidebar {
           width: 220px;
           background-color: #222;
@@ -63,6 +64,11 @@ function Sidebar() {
           margin-bottom: 20px;
         }
 
+        .sidebar ul {
+          list-style: none;
+          padding: 0;
+        }
+
         .sidebar-link {
           display: block;
           color: #fff;
@@ -72,31 +78,39 @@ function Sidebar() {
           padding: 8px 12px;
           border-radius: 6px;
           margin-bottom: 10px;
-          transition: all 0.3s ease;
+          transition: background 0.3s ease;
         }
 
         .sidebar-link:hover {
           background-color: #4caf50;
         }
 
-        .user p, .user span {
-          margin-top: 20px;
-          display: block;
+        .user {
+          margin-top: 30px;
+        }
+
+        .user span {
+          font-size: 0.8rem;
+          color: #4caf50;
         }
 
         .hamburger {
-          display: none;
-          font-size: 2rem;
-          background: none;
-          border: none;
-          color: #222;
-          cursor: pointer;
-          position: fixed;
-          top: 15px;
-          left: 15px;
-          z-index: 1001;
-        }
-
+  display: none;
+  font-size: 2rem;
+  background-color: #f83e06; /* fond jaune */
+  border: none;
+  color: #222; /* couleur des traits */
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1001;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+        /* =====================
+           MOBILE / TABLETTE
+        ===================== */
         @media (max-width: 768px) {
           .sidebar {
             position: fixed;
@@ -122,7 +136,6 @@ function Sidebar() {
 
           .sidebar-link {
             font-size: 0.95rem;
-            padding: 6px 10px;
           }
         }
 
@@ -131,16 +144,12 @@ function Sidebar() {
             width: 150px;
           }
 
-          .sidebar h3 {
+          .sidebar-link {
             font-size: 0.85rem;
           }
 
-          .sidebar-link {
-            font-size: 0.8rem;
-            padding: 5px 8px;
-          }
-
-          .user p, .user span {
+          .user p,
+          .user span {
             font-size: 0.75rem;
           }
         }
