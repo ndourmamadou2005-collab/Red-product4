@@ -1,6 +1,6 @@
 /* Background */
 .login-container {
-  background-color: #545b62;
+  background-color: #475562;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@
 .logo-icon {
   width: 35px;
   height: 35px;
-  background-color: #e6e6e6;
+  background-color: #dbd5d5;
   border-radius: 6px;
   position: relative;
 }
@@ -38,7 +38,7 @@
 }
 
 .logo h1 {
-  color: #f2f2f2;
+  color: #f8efef;
   font-size: 22px;
   letter-spacing: 2px;
   margin: 0;
@@ -46,7 +46,7 @@
 
 /* Card */
 .login-card {
-  background-color: #f2f2f2;
+  background-color: #fefbfb;
   width: 420px;
   padding: 33px;
   border-radius: 4px;
@@ -66,7 +66,7 @@
   padding: 14px;
   margin-bottom: 20px;
   border: none;
-  background-color: #cfd6df;
+  background-color: #f4f4f4;
   border-radius: 4px;
   font-size: 14px;
   outline: none;
@@ -107,7 +107,7 @@
 
 .signup-text {
   margin-top: 10px;
-  color: white;
+  color: rgb(241, 237, 237);
 }
 
 .signup-text span {
@@ -129,6 +129,7 @@
 
 .back-login-btn-bottom:hover {
   background-color: #4d555c;
-  color: white;
+  color: rgb(230, 226, 226);
 }
+
 

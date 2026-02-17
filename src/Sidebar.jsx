@@ -54,8 +54,8 @@ function Sidebar() {
   /* Sidebar */
   .sidebar {
     width: 220px;
-    background-color: #222;
-    color: #fff;
+    background-color: #0b0b0b;
+    color: #f7f3f3;
     padding: 20px;
     min-height: 100vh;
     box-sizing: border-box;
@@ -74,7 +74,7 @@ function Sidebar() {
 
   .sidebar-link {
     display: block;
-    color: #fff;
+    color: #f6f1f1;
     text-decoration: none;
     font-weight: 600;
     font-size: 1.1rem;

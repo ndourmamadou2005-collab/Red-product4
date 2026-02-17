@@ -1,0 +1,17 @@
+.read-the-docs {
+  color: #fffefe;
+}
+.logout-btn {
+  margin-left: 15px;
+  padding: 6px 12px;
+  background-color: #1c1b1c;
+  color: rgb(255, 242, 242);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}
+

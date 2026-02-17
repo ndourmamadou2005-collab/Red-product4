@@ -105,7 +105,7 @@ body {
   }
   
   .card {
-    background: white;
+    background: rgb(248, 245, 245);
     padding: 20px;
     border-radius: 6px;
     font-weight: bold;
@@ -141,7 +141,7 @@ body {
 }
 
 .hotel-card {
-  background: white;
+  background: rgb(249, 247, 247);
   border-radius: 8px;
   overflow: hidden;
 }
