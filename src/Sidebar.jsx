@@ -99,16 +99,16 @@ function Sidebar() {
 
   .hamburger {
     display: none;
-    font-size: 2rem;
-    background-color: #f7b731;
+    font-size: 1rem;
+    background-color: #f5c868;
     border: none;
     color: #222;
     cursor: pointer;
     position: fixed;
     top: 15px;
     left: 15px;
-    z-index: 1100; /* plus haut que la sidebar */
-    padding: 5px 10px;
+    z-index: 1020; /* plus haut que la sidebar */
+    padding: 3px 5px;
     border-radius: 6px;
   }
 
